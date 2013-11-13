@@ -45,6 +45,8 @@ import com.openbravo.pos.ticket.FindTicketsInfo;
 import com.openbravo.pos.ticket.TicketTaxInfo;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -510,6 +512,15 @@ public class DataLogicSales extends BeanFactoryDataSingle {
 
     public final Integer getNextTicketIndex() throws BasicException {
         return (Integer) s.DB.getSequenceSentence(s, "TICKETSNUM").find();
+    }
+    
+    public final String getNextCustomerIndex()  {
+        try {
+            return String.valueOf(s.DB.getSequenceSentence(s, "CUSTOMERSNUM").find());
+        } catch (BasicException ex) {
+            System.out.print(ex.getMessage());
+        }
+        return null;
     }
 
     public final Integer getNextTicketRefundIndex() throws BasicException {

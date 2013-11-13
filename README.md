@@ -27,3 +27,7 @@ To obtain the sources distribution package execute:
 ant dist.src
 
 Notes: All the packages created by the build process are located in the subfolder build/dist. 
+
+#NOTE
+==========
+this release only has been tested on postgresql.
