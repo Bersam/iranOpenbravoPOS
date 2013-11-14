@@ -121,9 +121,10 @@ public class JPaymentCheque extends javax.swing.JPanel implements JPaymentInterf
 
         jPanel4.setLayout(null);
 
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel8.setText(AppLocal.getIntString("Label.InputCash")); // NOI18N
         jPanel4.add(jLabel8);
-        jLabel8.setBounds(20, 20, 100, 15);
+        jLabel8.setBounds(190, 30, 100, 15);
 
         m_jMoneyEuros.setBackground(new java.awt.Color(153, 153, 255));
         m_jMoneyEuros.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -131,7 +132,7 @@ public class JPaymentCheque extends javax.swing.JPanel implements JPaymentInterf
         m_jMoneyEuros.setOpaque(true);
         m_jMoneyEuros.setPreferredSize(new java.awt.Dimension(150, 25));
         jPanel4.add(m_jMoneyEuros);
-        m_jMoneyEuros.setBounds(120, 20, 150, 25);
+        m_jMoneyEuros.setBounds(20, 20, 150, 25);
 
         add(jPanel4, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents

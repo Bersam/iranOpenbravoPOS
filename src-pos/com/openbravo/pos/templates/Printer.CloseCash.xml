@@ -25,14 +25,14 @@
         <image>Printer.Ticket.Logo</image>
         <line></line>
         <line size="1">
-            <text align ="center" length="42" bold="true">Close cash report</text>            
+            <text align ="center" length="42" bold="true">گزارش بستن صندوق</text>            
         </line>
         <line></line>
         <line>
-            <text bold="true">Payments report</text>
+            <text bold="true">گزارش پرداخت ها</text>
         </line>
         <line>
-            <text align ="right" length="42">Total</text>
+            <text align ="right" length="42">مجموع</text>
         </line>
         <line>
             <text>------------------------------------------</text>
@@ -47,20 +47,20 @@
             <text>------------------------------------------</text>
         </line> 
         <line>
-            <text align ="left" length="32">Payments:</text>
+            <text align ="left" length="32">پرداخت ها</text>
             <text align ="right" length="10">${payments.printPayments()}</text>
         </line>
         <line></line>
         <line size="1">
-            <text align ="left" length="32" bold="true">Total</text>
+            <text align ="left" length="32" bold="true">مجموع</text>
             <text align ="right" length="10" bold="true">${payments.printPaymentsTotal()}</text>
         </line>
         <line></line>
         <line>
-            <text bold="true">Taxes report</text>
+            <text bold="true">گزارش مالیات</text>
         </line>
         <line>
-            <text align ="right" length="42">Total</text>
+            <text align ="right" length="42">مجموع</text>
         </line>
         <line>
             <text>------------------------------------------</text>
@@ -75,7 +75,7 @@
             <text>------------------------------------------</text>
         </line>
         <line>
-            <text align ="left" length="32">Receipts:</text>
+            <text align ="left" length="32">رسید ها</text>
             <text align ="right" length="10">${payments.printSales()}</text>
         </line>
         <line></line>
@@ -84,25 +84,25 @@
             <text align ="right" length="10" bold="true">${payments.printSalesBase()}</text>
         </line>
         <line size="1">
-            <text align ="left" length="22" bold="true">Total</text>
+            <text align ="left" length="22" bold="true">مجموع</text>
             <text align ="right" length="10" bold="true">${payments.printSalesTaxes()}</text>
             <text align ="right" length="10" bold="true">${payments.printSalesTotal()}</text>
         </line>
         <line></line>
         <line>
-            <text length="18">Machine:</text>
+            <text length="18">ماشین</text>
             <text>${payments.printHost()}</text>
         </line>    
         <line>
-            <text length="18">Sequence:</text>
+            <text length="18">شماره:</text>
             <text length="24" align="right">${payments.printSequence()}</text>
         </line> 
         <line>
-            <text length="18">Start date:</text>
+            <text length="18">تاریخ شروع</text>
             <text length="24" align="right">${payments.printDateStart()}</text>
         </line>  
         <line>
-            <text length="18">End date:</text>
+            <text length="18">تاریخ پایان</text>
             <text length="24" align="right">${payments.printDateEnd()}</text>
         </line>  
     </ticket>

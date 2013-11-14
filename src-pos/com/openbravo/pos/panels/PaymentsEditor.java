@@ -210,10 +210,12 @@ public class PaymentsEditor extends javax.swing.JPanel implements EditorRecord {
 
         setLayout(new java.awt.BorderLayout());
 
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText(AppLocal.getIntString("label.paymentreason")); // NOI18N
 
         m_jreason.setFocusable(false);
 
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText(AppLocal.getIntString("label.paymenttotal")); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);

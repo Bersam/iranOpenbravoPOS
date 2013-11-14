@@ -24,6 +24,7 @@ import com.openbravo.pos.forms.AppLocal;
 import com.openbravo.pos.forms.DataLogicSales;
 import com.openbravo.pos.ticket.TicketInfo;
 import com.openbravo.pos.ticket.TicketLineInfo;
+import com.openbravo.pos.util.LocaleUtil;
 import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.Dialog;
@@ -155,6 +156,7 @@ public class ReceiptSplit extends javax.swing.JDialog {
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.SOUTH);
 
+        LocaleUtil.applyComponentOrientation(jPanel1);
         jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.LINE_AXIS));
 
         jPanel5.setLayout(new java.awt.BorderLayout());
@@ -176,7 +178,7 @@ public class ReceiptSplit extends javax.swing.JDialog {
         gridBagConstraints.gridy = 0;
         jPanel4.add(jBtnToRightAll, gridBagConstraints);
 
-        jBtnToRightOne.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/openbravo/images/1rightarrow.png"))); // NOI18N
+        jBtnToRightOne.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/openbravo/images/1leftarrow.png"))); // NOI18N
         jBtnToRightOne.setFocusPainted(false);
         jBtnToRightOne.setFocusable(false);
         jBtnToRightOne.setMargin(new java.awt.Insets(8, 14, 8, 14));
@@ -191,7 +193,7 @@ public class ReceiptSplit extends javax.swing.JDialog {
         gridBagConstraints.insets = new java.awt.Insets(5, 0, 0, 0);
         jPanel4.add(jBtnToRightOne, gridBagConstraints);
 
-        jBtnToLeftOne.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/openbravo/images/1leftarrow.png"))); // NOI18N
+        jBtnToLeftOne.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/openbravo/images/1rightarrow.png"))); // NOI18N
         jBtnToLeftOne.setFocusPainted(false);
         jBtnToLeftOne.setFocusable(false);
         jBtnToLeftOne.setMargin(new java.awt.Insets(8, 14, 8, 14));
@@ -228,8 +230,8 @@ public class ReceiptSplit extends javax.swing.JDialog {
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
-        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-730)/2, (screenSize.height-470)/2, 730, 470);
+        setSize(new java.awt.Dimension(730, 470));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void m_jButtonOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_m_jButtonOKActionPerformed

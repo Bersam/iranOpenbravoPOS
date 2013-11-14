@@ -37,6 +37,7 @@ import com.openbravo.pos.scripting.ScriptFactory;
 import com.openbravo.pos.forms.DataLogicSystem;
 import com.openbravo.pos.panels.JTicketsFinder;
 import com.openbravo.pos.ticket.FindTicketsInfo;
+import com.openbravo.pos.util.LocaleUtil;
 
 public class JTicketsBagTicket extends JTicketsBag {
     
@@ -246,7 +247,6 @@ public class JTicketsBagTicket extends JTicketsBag {
 
         m_jButtons.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
 
-        m_jTicketId.setBackground(java.awt.Color.white);
         m_jTicketId.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         m_jTicketId.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.darkShadow")), javax.swing.BorderFactory.createEmptyBorder(1, 4, 1, 4)));
         m_jTicketId.setOpaque(true);
@@ -357,6 +357,8 @@ public class JTicketsBagTicket extends JTicketsBag {
         jPanel4.add(jPanel5);
 
         jPanel3.add(jPanel4, java.awt.BorderLayout.NORTH);
+
+        LocaleUtil.applyComponentOrientation(jPanel1);
 
         buttonGroup1.add(jrbSales);
         jrbSales.setText(AppLocal.getIntString("label.sales")); // NOI18N
