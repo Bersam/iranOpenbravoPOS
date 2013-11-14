@@ -27,6 +27,7 @@ import com.openbravo.pos.forms.AppLocal;
 import com.openbravo.format.Formats;
 import com.openbravo.basic.BasicException;
 import com.openbravo.beans.JCalendarDialog;
+import com.openbravo.beans.PersianCalendar;
 import com.openbravo.data.gui.ComboBoxValModel;
 import com.openbravo.data.gui.MessageInf;
 import com.openbravo.data.loader.SentenceList;
@@ -34,6 +35,8 @@ import com.openbravo.data.user.EditorRecord;
 import com.openbravo.data.user.DirtyManager;
 import com.openbravo.pos.forms.AppView;
 import com.openbravo.pos.forms.DataLogicSales;
+import com.openbravo.pos.util.LocaleUtil;
+import java.awt.LayoutManager;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -53,7 +56,7 @@ public class TaxEditor extends JPanel implements EditorRecord {
     
     /** Creates new form taxEditor */
     public TaxEditor(AppView app, DirtyManager dirty) {
-        
+      
         DataLogicSales dlSales = (DataLogicSales) app.getBean("com.openbravo.pos.forms.DataLogicSales");
         
         initComponents();
@@ -249,31 +252,37 @@ public class TaxEditor extends JPanel implements EditorRecord {
         add(m_jName);
         m_jName.setBounds(240, 20, 200, 19);
 
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel2.setText(AppLocal.getIntString("Label.Name")); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(20, 20, 220, 15);
+        jLabel2.setBounds(450, 20, 160, 15);
 
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText(AppLocal.getIntString("label.dutyrate")); // NOI18N
         add(jLabel3);
-        jLabel3.setBounds(20, 170, 220, 15);
+        jLabel3.setBounds(450, 170, 220, 15);
         add(m_jRate);
-        m_jRate.setBounds(240, 170, 60, 19);
+        m_jRate.setBounds(380, 170, 60, 19);
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel1.setText(AppLocal.getIntString("label.taxcategory")); // NOI18N
         add(jLabel1);
-        jLabel1.setBounds(20, 50, 220, 15);
+        jLabel1.setBounds(450, 56, 140, 15);
 
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel4.setText(AppLocal.getIntString("label.custtaxcategory")); // NOI18N
         add(jLabel4);
-        jLabel4.setBounds(20, 110, 220, 15);
+        jLabel4.setBounds(450, 114, 220, 15);
 
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText(AppLocal.getIntString("label.taxparent")); // NOI18N
         add(jLabel5);
-        jLabel5.setBounds(20, 140, 220, 15);
+        jLabel5.setBounds(450, 140, 220, 15);
 
         jCascade.setText(AppLocal.getIntString("label.cascade")); // NOI18N
+        jCascade.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         add(jCascade);
-        jCascade.setBounds(320, 170, 110, 23);
+        jCascade.setBounds(370, 230, 110, 23);
         add(m_jTaxCategory);
         m_jTaxCategory.setBounds(240, 50, 200, 24);
         add(m_jTaxParent);
@@ -281,15 +290,17 @@ public class TaxEditor extends JPanel implements EditorRecord {
         add(m_jCustTaxCategory);
         m_jCustTaxCategory.setBounds(240, 110, 200, 24);
 
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel6.setText(AppLocal.getIntString("label.order")); // NOI18N
         add(jLabel6);
-        jLabel6.setBounds(20, 200, 220, 15);
+        jLabel6.setBounds(450, 200, 220, 15);
         add(jOrder);
-        jOrder.setBounds(240, 200, 60, 19);
+        jOrder.setBounds(380, 200, 60, 19);
 
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel7.setText(AppLocal.getIntString("Label.ValidFrom")); // NOI18N
         add(jLabel7);
-        jLabel7.setBounds(20, 80, 120, 15);
+        jLabel7.setBounds(450, 80, 120, 15);
         add(txtValidFrom);
         txtValidFrom.setBounds(240, 80, 200, 19);
 
@@ -300,7 +311,7 @@ public class TaxEditor extends JPanel implements EditorRecord {
             }
         });
         add(btnValidFrom);
-        btnValidFrom.setBounds(450, 80, 50, 26);
+        btnValidFrom.setBounds(170, 80, 50, 26);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnValidFromActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnValidFromActionPerformed

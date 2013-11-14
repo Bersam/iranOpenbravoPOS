@@ -22,6 +22,7 @@ package com.openbravo.format;
 import java.text.*;
 import java.util.Date;
 import com.openbravo.basic.BasicException;
+import com.openbravo.beans.PersianCalendar;
 
 public abstract class Formats {
     
@@ -45,6 +46,9 @@ public abstract class Formats {
     private static DateFormat m_dateformat = DateFormat.getDateInstance();
     private static DateFormat m_timeformat = DateFormat.getTimeInstance();
     private static DateFormat m_datetimeformat = DateFormat.getDateTimeInstance();
+    
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    PersianCalendar pc =  new PersianCalendar();
    
     
     /** Creates a new instance of Formats */
@@ -229,11 +233,12 @@ public abstract class Formats {
     }    
     private static final class FormatsTIMESTAMP extends Formats {       
         protected String formatValueInt(Object value) {
-            return m_datetimeformat.format((Date) value);
+//            return m_datetimeformat.format((Date) value);
+            return pc.GregorianToSolar(sdf.format((Date)value));
         }   
         protected Object parseValueInt(String value) throws ParseException {
-            try {
-                return m_datetimeformat.parse(value);
+            try {                
+                return sdf.parse(pc.SolarToGregorian(value));
             } catch (ParseException e) {
                 // segunda oportunidad como fecha normalita
                 return m_dateformat.parse(value);
