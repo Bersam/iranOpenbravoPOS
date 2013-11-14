@@ -26,6 +26,7 @@ import javax.swing.JFrame;
 import com.openbravo.pos.instance.AppMessage;
 import com.openbravo.pos.instance.InstanceManager;
 import java.awt.ComponentOrientation;
+import java.awt.Font;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
@@ -42,12 +43,13 @@ public class JRootFrame extends javax.swing.JFrame implements AppMessage {
     private AppProperties m_props;
     
     /** Creates new form JRootFrame */
-    public JRootFrame() {        
+    public JRootFrame() {   
+        setFont(new Font("Tahoma", Font.BOLD, 11));
         initComponents();    
     }
     
     public void initFrame(AppProperties props) {
-        
+        setFont(new Font("Tahoma", Font.BOLD, 11));
         m_props = props;
         
         m_rootapp = new JRootApp();

@@ -172,17 +172,19 @@ public class CategoriesEditor extends JPanel implements EditorRecord {
 
         setLayout(null);
 
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel2.setText(AppLocal.getIntString("Label.Name")); // NOI18N
         add(jLabel2);
-        jLabel2.setBounds(20, 20, 80, 14);
+        jLabel2.setBounds(210, 20, 80, 15);
         add(m_jName);
-        m_jName.setBounds(100, 20, 180, 18);
+        m_jName.setBounds(20, 20, 180, 19);
 
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText(AppLocal.getIntString("label.image")); // NOI18N
         add(jLabel3);
-        jLabel3.setBounds(20, 80, 80, 14);
+        jLabel3.setBounds(270, 80, 80, 15);
         add(m_jImage);
-        m_jImage.setBounds(100, 80, 240, 180);
+        m_jImage.setBounds(20, 70, 240, 180);
 
         m_jCatalogAdd.setText(AppLocal.getIntString("button.catalogadd")); // NOI18N
         m_jCatalogAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -191,7 +193,7 @@ public class CategoriesEditor extends JPanel implements EditorRecord {
             }
         });
         add(m_jCatalogAdd);
-        m_jCatalogAdd.setBounds(370, 20, 170, 24);
+        m_jCatalogAdd.setBounds(370, 20, 170, 25);
 
         m_jCatalogDelete.setText(AppLocal.getIntString("button.catalogdel")); // NOI18N
         m_jCatalogDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -200,13 +202,14 @@ public class CategoriesEditor extends JPanel implements EditorRecord {
             }
         });
         add(m_jCatalogDelete);
-        m_jCatalogDelete.setBounds(370, 50, 170, 24);
+        m_jCatalogDelete.setBounds(370, 50, 170, 25);
 
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel5.setText(AppLocal.getIntString("label.prodcategory")); // NOI18N
         add(jLabel5);
-        jLabel5.setBounds(20, 50, 90, 14);
+        jLabel5.setBounds(210, 40, 90, 15);
         add(m_jCategory);
-        m_jCategory.setBounds(100, 50, 180, 20);
+        m_jCategory.setBounds(20, 40, 180, 20);
     }// </editor-fold>//GEN-END:initComponents
 
     private void m_jCatalogDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_m_jCatalogDeleteActionPerformed
