@@ -239,7 +239,8 @@ public class DeviceTicket {
     }
 
     public static String alignBarCode(String sLine, int iSize) {
-
+        if(sLine == null)
+            return "";
         if (sLine.length() > iSize) {
             return sLine.substring(sLine.length() - iSize);
         } else {
@@ -248,7 +249,8 @@ public class DeviceTicket {
     }
 
     public static String alignLeft(String sLine, int iSize) {
-
+        if(sLine == null)
+            return "";
         if (sLine.length() > iSize) {
             return sLine.substring(0, iSize);
         } else {
@@ -257,7 +259,8 @@ public class DeviceTicket {
     }
 
     public static String alignRight(String sLine, int iSize) {
-
+        if(sLine == null)
+            return "";
         if (sLine.length() > iSize) {
             return sLine.substring(sLine.length() - iSize);
         } else {
@@ -266,7 +269,8 @@ public class DeviceTicket {
     }
 
     public static String alignCenter(String sLine, int iSize) {
-
+        if(sLine == null)
+            return "";
         if (sLine.length() > iSize) {
             return alignRight(sLine.substring(0, (sLine.length() + iSize) / 2), iSize);
         } else {
