@@ -25,5 +25,6 @@ set CP="%DIRNAME%openbravopos.jar"
 
 set CP=%CP%;"%DIRNAME%locales/"
 set CP=%CP%;"%DIRNAME%lib/substance.jar"
+set CP=%CP%;"%DIRNAME%lib/tinylaf.jar"
 
 start /B javaw -cp %CP% -Djava.util.logging.config.file="%DIRNAME%logging.properties" com.openbravo.pos.config.JFrmConfig

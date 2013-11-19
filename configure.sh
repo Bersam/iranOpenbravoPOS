@@ -25,6 +25,7 @@ CP=$DIRNAME/openbravopos.jar
 
 CP=$CP:$DIRNAME/locales/
 CP=$CP:$DIRNAME/lib/substance.jar
+CP=$CP:$DIRNAME/lib/tinylaf.jar
 
 
-java -cp $CP -Djava.util.logging.config.file=$DIRNAME/logging.properties -Dswing.defaultlaf=javax.swing.plaf.metal.MetalLookAndFeel com.openbravo.pos.config.JFrmConfig
+java -cp $CP -Djava.util.logging.config.file=$DIRNAME/logging.properties -Dswing.defaultlaf=de.muntjak.tinylookandfeel.TinyLookAndFeel com.openbravo.pos.config.JFrmConfig
