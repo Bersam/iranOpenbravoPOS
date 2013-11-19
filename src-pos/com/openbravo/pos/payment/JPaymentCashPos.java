@@ -188,21 +188,22 @@ public class JPaymentCashPos extends javax.swing.JPanel implements JPaymentInter
         jPanel4.setPreferredSize(new java.awt.Dimension(0, 100));
         jPanel4.setLayout(null);
 
-        m_jChangeEuros.setBackground(java.awt.Color.white);
         m_jChangeEuros.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         m_jChangeEuros.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(javax.swing.UIManager.getDefaults().getColor("Button.darkShadow")), javax.swing.BorderFactory.createEmptyBorder(1, 4, 1, 4)));
         m_jChangeEuros.setOpaque(true);
         m_jChangeEuros.setPreferredSize(new java.awt.Dimension(150, 25));
         jPanel4.add(m_jChangeEuros);
-        m_jChangeEuros.setBounds(120, 50, 150, 25);
+        m_jChangeEuros.setBounds(20, 50, 150, 25);
 
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel6.setText(AppLocal.getIntString("Label.ChangeCash")); // NOI18N
         jPanel4.add(jLabel6);
-        jLabel6.setBounds(20, 50, 100, 15);
+        jLabel6.setBounds(190, 56, 100, 15);
 
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel8.setText(AppLocal.getIntString("Label.InputCash")); // NOI18N
         jPanel4.add(jLabel8);
-        jLabel8.setBounds(20, 20, 100, 15);
+        jLabel8.setBounds(190, 26, 100, 15);
 
         m_jMoneyEuros.setBackground(new java.awt.Color(153, 153, 255));
         m_jMoneyEuros.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -210,7 +211,7 @@ public class JPaymentCashPos extends javax.swing.JPanel implements JPaymentInter
         m_jMoneyEuros.setOpaque(true);
         m_jMoneyEuros.setPreferredSize(new java.awt.Dimension(150, 25));
         jPanel4.add(m_jMoneyEuros);
-        m_jMoneyEuros.setBounds(120, 20, 150, 25);
+        m_jMoneyEuros.setBounds(20, 20, 150, 25);
 
         jPanel5.add(jPanel4, java.awt.BorderLayout.NORTH);
 

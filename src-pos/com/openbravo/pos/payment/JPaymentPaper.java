@@ -114,9 +114,10 @@ public class JPaymentPaper extends javax.swing.JPanel implements JPaymentInterfa
 
         jPanel4.setLayout(null);
 
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel1.setText(AppLocal.getIntString("Label.InputCash")); // NOI18N
         jPanel4.add(jLabel1);
-        jLabel1.setBounds(20, 20, 100, 15);
+        jLabel1.setBounds(200, 30, 100, 15);
 
         m_jMoneyEuros.setBackground(new java.awt.Color(153, 153, 255));
         m_jMoneyEuros.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -124,7 +125,7 @@ public class JPaymentPaper extends javax.swing.JPanel implements JPaymentInterfa
         m_jMoneyEuros.setOpaque(true);
         m_jMoneyEuros.setPreferredSize(new java.awt.Dimension(150, 25));
         jPanel4.add(m_jMoneyEuros);
-        m_jMoneyEuros.setBounds(120, 20, 150, 25);
+        m_jMoneyEuros.setBounds(40, 20, 150, 25);
 
         add(jPanel4, java.awt.BorderLayout.CENTER);
 

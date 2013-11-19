@@ -63,14 +63,14 @@ public class ProductsEditor extends JPanel implements EditorRecord {
     private boolean priceselllock = false;
     
     private boolean reportlock = false;
-    
-    private String searchKey;
+
+    DataLogicSales dlSales;
     
     /** Creates new form JEditProduct */
     public ProductsEditor(DataLogicSales dlSales, DirtyManager dirty) {
         initComponents();
         
-        searchKey = dlSales.getNextCustomerIndex();
+        this.dlSales = dlSales;
         
         // The taxes sentence
         taxsent = dlSales.getTaxList();
@@ -142,7 +142,7 @@ public class ProductsEditor extends JPanel implements EditorRecord {
     }    
     
     public void writeValueEOF() {
-        
+        String searchKey = dlSales.getNextCustomerIndex();
         reportlock = true;
         // Los valores
         m_jTitle.setText(AppLocal.getIntString("label.recordeof"));
@@ -189,7 +189,7 @@ public class ProductsEditor extends JPanel implements EditorRecord {
         calculatePriceSellTax();
     }
     public void writeValueInsert() {
-       
+        String searchKey = dlSales.getNextCustomerIndex();
         reportlock = true;
         // Los valores
         m_jTitle.setText(AppLocal.getIntString("label.recordnew"));

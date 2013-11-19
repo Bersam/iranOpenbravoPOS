@@ -47,19 +47,19 @@ public class CustomersView extends javax.swing.JPanel implements EditorRecord {
     
     private DirtyManager m_Dirty;
     
-    private String customerSearchKey;
+    DataLogicSales dlSales;
         
     /** Creates new form CustomersView */
     public CustomersView(AppView app, DirtyManager dirty) {
         
-        DataLogicSales dlSales = (DataLogicSales) app.getBean("com.openbravo.pos.forms.DataLogicSales");
+         dlSales = (DataLogicSales) app.getBean("com.openbravo.pos.forms.DataLogicSales");
         
         initComponents();
         
         m_sentcat = dlSales.getTaxCustCategoriesList();
         m_CategoryModel = new ComboBoxValModel();
         
-        customerSearchKey = dlSales.getNextCustomerIndex();
+        
         
         m_Dirty = dirty;
         m_jTaxID.getDocument().addDocumentListener(dirty);
@@ -100,6 +100,7 @@ public class CustomersView extends javax.swing.JPanel implements EditorRecord {
     }
     
     public void writeValueEOF() {
+        String customerSearchKey = dlSales.getNextCustomerIndex();
         m_oId = null;
         m_jTaxID.setText(null);
         m_jSearchkey.setText(customerSearchKey);
@@ -156,6 +157,7 @@ public class CustomersView extends javax.swing.JPanel implements EditorRecord {
     } 
     
     public void writeValueInsert() {
+        String customerSearchKey = dlSales.getNextCustomerIndex();
         m_oId = null;
         m_jTaxID.setText(null);
         m_jSearchkey.setText(customerSearchKey);

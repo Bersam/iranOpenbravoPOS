@@ -125,11 +125,12 @@ public class FloorsEditor extends JPanel implements EditorRecord {
         jPanel1.setPreferredSize(new java.awt.Dimension(150, 100));
         jPanel1.setLayout(null);
 
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText(AppLocal.getIntString("Label.Name")); // NOI18N
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(20, 20, 90, 20);
+        jLabel3.setBounds(220, 20, 90, 20);
         jPanel1.add(m_jName);
-        m_jName.setBounds(110, 20, 180, 18);
+        m_jName.setBounds(20, 20, 180, 19);
 
         add(jPanel1, java.awt.BorderLayout.NORTH);
 
